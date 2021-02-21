@@ -6,7 +6,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Get-Job | Wait-Job
 
 # Install NeoVim
-choco install neovim git nodejs -y
+choco install neovim git nodejs python -y
 
 Get-Job | Wait-Job
 
