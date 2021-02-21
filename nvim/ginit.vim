@@ -1,4 +1,5 @@
 GuiPopupmenu 0
+GuiFont Roboto Mono:h18
 
 let s:fontsize = 12
 function! AdjustFontSize(amount)

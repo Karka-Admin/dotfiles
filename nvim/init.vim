@@ -1,5 +1,3 @@
-" ------------------- GENERAL OPTIONS ---------------------
-
 if !has('gui_running')
   set t_Co=256
 endif
@@ -8,7 +6,7 @@ filetype plugin indent on		" Enable indentation rules that are file-type specifi
 syntax enable				        " Enable syntax highlighting
 set encoding=utf-8			    " The encoding displayed
 set mouse=a                 " Enable mouse
-set clipboard=unnamedplus		" Copy paste from/to vim
+set clipboard=unnamed   		" Copy paste from/to vim
 set pumheight=10			      " Popup menu size
 set history=10				      " Undo limit
 set cmdheight=1				      " Height of the command bar
@@ -35,24 +33,17 @@ set noshowmode
 set laststatus=2
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'seoul256',
       \ }
 
-" NERDTree keybindings
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+call plug#begin('~/AppData/Local/nvim-data')
 
-" ------------------- PLUGIN OPTIONS ----------------------
-
-" Vim-Plug plugin managers plugins.
-call plug#begin('~\AppData\Local\nvim-data\site\autoload')
-    
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'preservim/nerdtree'
-    Plug 'itchyny/lightline.vim'
+	Plug 'jnurmine/Zenburn'
+	Plug 'morhetz/gruvbox'
+	Plug 'preservim/nerdtree'
+	Plug 'itchyny/lightline.vim'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-colorscheme gruber-darker-vim
+colorscheme zenburn
